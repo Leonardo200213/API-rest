@@ -1,7 +1,7 @@
 <?php
 function fpost(){
-	$url = "http://localhost:8080/swagger-ui.html";
-	$data = ['collection' = > 'EsercizioAPI'];
+	$url = "curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d 'Leonardo' 'http://localhost:8080/api/tutorial/1.0/employees'";
+	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees';
 	$curl = curl_init($url);
 
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -16,9 +16,8 @@ function fpost(){
 
 
 function fget(){
-	$url = 'http://localhost:8080/swagger-ui.html';
-	$collection_name = 'EsercizioAPI';
-	$request_url = $url . '/' . $collection_name;
+	$url = "curl -X GET --header 'Accept: application/json' 'http://localhost:8080/api/tutorial/1.0/employees'";
+	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees';
 
 	$curl = curl_init($request_url);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -31,9 +30,8 @@ function fget(){
 
 
 function fput(){
-	$url = 'http://localhost:8080/swagger-ui.html';
-	$collection_name = 'EsercizioAPI';
-	$request_url = $url . '/' . $collection_name;
+	$url = "curl -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d 'Leonardo' 'http://localhost:8080/api/tutorial/1.0/employees/1'";
+	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees/1';
 
 	$data = ['public_write' => true];
 	$curl = curl_init($request_url);
@@ -49,9 +47,8 @@ function fput(){
 
 
 function fdelete(){
-	$url = 'http://localhost:8080/swagger-ui.html';
-	$collection_name = 'EsercizioAPI';
-	$request_url = $url . '/' . $collection_name;
+	$url = "curl -X DELETE --header 'Accept: */*' 'http://localhost:8080/api/tutorial/1.0/employees/1'";
+	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees/1';
 
 	$curl = curl_init($request_url);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

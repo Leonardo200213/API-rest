@@ -10,8 +10,11 @@
 			<div class="blu">
 				<p>
 					<label><b>Manage Employees</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					<button type="button" class="btn btn-danger" > <img src="meno.png" /> &nbsp; Cancella</button>&nbsp;&nbsp;
-					<button type="button" class="btn btn-success"> <img src="piu.png" /> &nbsp; Aggiungi nuovo impiegato</button>
+					<form action="api.php">
+					<input type="submit" class="btn btn-danger" onclick="fdelete()"> <img src="meno.png" /> &nbsp; Cancella</input>&nbsp;&nbsp;
+					
+					<input type="submit" class="btn btn-success" onclick="fpost()"> <img src="piu.png" /> &nbsp; Aggiungi nuovo impiegato</input>
+					</form>
 				</p>
 			
 			</div>
