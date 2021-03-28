@@ -10,13 +10,17 @@
 			<div class="blu">
 				<p>
 					<label><b>Manage Employees</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					<button type="button" class="btn btn-danger" > <img src="meno.png" /> &nbsp; Cancella</button>&nbsp;&nbsp;
-					<button type="button" class="btn btn-success"> <img src="piu.png" /> &nbsp; Aggiungi nuovo impiegato</button>
+					<br><br>
+					<form action="api.php">
+					<button type="submit" class="btn btn-danger" onclick="fdelete()"> <img src="meno.png" /> &nbsp; Cancella</button>&nbsp;&nbsp;
+					
+					<button type="submit" class="btn btn-success" onclick="fpost()"> <img src="piu.png" /> &nbsp; Aggiungi nuovo impiegato</button>
+					</form>
 				</p>
 			
 			</div>
 			<div>
-				<br>
+				<br><br><br>
 				<table border="2" frame="hsides">
 					<tr>
 						<th>Nome</th>
@@ -25,6 +29,17 @@
 						<th>Telefono</th>
 						<th>Azioni</th>
 						
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<form action="api.php">
+								<button type="submit" onclick="fpatch()"> <img src="penna.jpg" /></button>
+							</form>
+						</td>
 					</tr>
 				</table>
 			</div>
