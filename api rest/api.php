@@ -59,4 +59,18 @@ function fdelete(){
 	curl_close($curl);
 	echo $response . PHP_EOL;
 }
+
+function fpatch(){
+	$url = "curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' -d 'Leonardo' 'http://localhost:8080/api/tutorial/1.0/employees/1''";
+	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees/1';
+
+	$curl = curl_init($request_url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PATCH');
+	curl_setopt($curl, CURLOPT_HTTPHEADER, ['X-RapidAPI-Host: http://localhost:8080/swagger-ui.html', 'Content-Type: application/json']);
+	
+	$response = curl_exec($curl);
+	curl_close($curl);
+	echo $response . PHP_EOL;
+}
 ?>
