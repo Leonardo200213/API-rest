@@ -1,4 +1,4 @@
-
+<?php
 function fpost(){
 	$url = "curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d 'Leonardo' 'http://localhost:8080/api/tutorial/1.0/employees'";
 	$request_url = 'http://localhost:8080/api/tutorial/1.0/employees';
@@ -73,3 +73,4 @@ function fpatch(){
 	curl_close($curl);
 	echo $response . PHP_EOL;
 }
+?>
